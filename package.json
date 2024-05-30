@@ -1,0 +1,20 @@
+{
+  "name": "@devheerim/react-lib",
+  "version": "1.0.0",
+  "description": "devheerim's useful react lib!",
+  "main": "index.ts",
+  "scripts": {
+    "build:cjs": "tsc --project ./tsconfig.cjs.json",
+    "build:mjs": "tsc --project ./tsconfig.mjs.json",
+    "build": "yarn build:cjs && yarn build:mjs"
+  },
+  "author": "devheerim <devheerim@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  }
+}
