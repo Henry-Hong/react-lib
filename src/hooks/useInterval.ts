@@ -2,13 +2,20 @@ import { useEffect, useRef } from "react";
 type TypeFunctionWithNoArgs = () => void;
 
 /**
+ * ### Overview
  * @hooks useInterval
+ * @param {function} callback - 실행할 콜백함수
+ * @param {number | null} delay interval 딜레이
+ * @returns {object} intervalRef.current
+ * ---
+ * ### Details
  * @description
  * - 1. callback이 중간에 바뀌어도 interval이 초기화되지 않습니다.
  * - 2. ref를 사용하여 컴포넌트 렌더링 사이에 참조를 유지합니다.
  * - 3. interval 딜레이를 선언적으로 관리할 수 있습니다.
  * @example
  * ```
+ * // EXAMPLE_START
  * // setInterval vs useInterval
  * const callback = () => console.log("callback");
  *
@@ -19,6 +26,7 @@ type TypeFunctionWithNoArgs = () => void;
  * useInterval(callback, 1000); // 1. 초기설정
  * useInterval(callback, null); // 2. 정지
  * useInterval(callback, 1000); // 3. 다시재생
+ * // EXAMPLE_END
  * ```
  */
 export const useInterval = (

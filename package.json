@@ -1,12 +1,12 @@
 {
   "name": "@devheerim/react-lib",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "devheerim's useful react lib!",
   "scripts": {
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "build:mjs": "tsc --project ./tsconfig.mjs.json",
     "build": "rm -rf ./dist && yarn build:cjs && yarn build:mjs",
-    "publish:npm": "yarn publish --access public"
+    "publish:npm": "yarn publish --no-git-tag-version --access public"
   },
   "author": "devheerim <devheerim@gmail.com>",
   "license": "ISC",
