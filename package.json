@@ -1,6 +1,6 @@
 {
   "name": "@devheerim/react-lib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "devheerim's useful react lib!",
   "scripts": {
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
