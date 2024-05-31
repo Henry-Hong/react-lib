@@ -1,12 +1,12 @@
 {
   "name": "@devheerim/react-lib",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "devheerim's useful react lib!",
-  "main": "index.ts",
   "scripts": {
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "build:mjs": "tsc --project ./tsconfig.mjs.json",
-    "build": "yarn build:cjs && yarn build:mjs"
+    "build": "rm -rf ./dist && yarn build:cjs && yarn build:mjs",
+    "publish:npm": "yarn publish --access public"
   },
   "author": "devheerim <devheerim@gmail.com>",
   "license": "ISC",
@@ -16,5 +16,17 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.4.5"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/mjs/index.d.ts",
+        "default": "./dist/mjs/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
   }
 }
