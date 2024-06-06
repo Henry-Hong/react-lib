@@ -1,0 +1,32 @@
+{
+  "name": "@devheerim/react-hooks",
+  "version": "1.0.9",
+  "description": "devheerim's useful react hooks!",
+  "scripts": {
+    "build:cjs": "tsc --project ./tsconfig.cjs.json",
+    "build:mjs": "tsc --project ./tsconfig.mjs.json",
+    "build": "rm -rf ./dist && yarn build:cjs && yarn build:mjs",
+    "publish:npm": "yarn publish --no-git-tag-version --access public"
+  },
+  "author": "devheerim <devheerim@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/mjs/index.d.ts",
+        "default": "./dist/mjs/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  }
+}
