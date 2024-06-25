@@ -2,7 +2,10 @@
   "name": "@devheerim/monorepo",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Henry-Hong/react-lib.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Henry-Hong/react-lib"
+  },
   "author": "Henry-Hong <hhr8540@naver.com>",
   "license": "MIT",
   "private": true,
