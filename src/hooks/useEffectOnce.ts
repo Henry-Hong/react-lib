@@ -4,7 +4,7 @@ import { EffectCallback, useEffect, useRef } from "react";
  * ### Overview
  * @hooks useEffectOnce
  * @param {function} callback - 한번만 실행할 콜백함수
- * @returns void 0
+ * @returns void
  * ---
  * ### Details
  * @description
